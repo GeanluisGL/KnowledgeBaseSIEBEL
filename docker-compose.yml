@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./server
+    # ports:
+    #   - "3000:3000"  <-- Puedes comentar esta línea por seguridad, 
+    #                      ya que Nginx se comunica internamente.
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=${JWT_SECRET}
+
+  frontend:
+    build: ./client
+    ports:
+      - "80:80"       # <-- Este es el único puerto que necesitas abrir
+    depends_on:
+      - backend

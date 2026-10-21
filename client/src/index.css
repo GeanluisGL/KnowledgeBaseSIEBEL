@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+/* Estilos para el Markdown renderizado (sin plugins extra) */
+.markdown {
+  @apply text-[15px] leading-7 text-gray-800;
+}
+.markdown > * + * {
+  @apply mt-4;
+}
+.markdown h1 {
+  @apply mt-8 text-2xl font-bold text-gray-900;
+}
+.markdown h2 {
+  @apply mt-8 text-xl font-semibold text-gray-900;
+}
+.markdown h3 {
+  @apply mt-6 text-lg font-semibold text-gray-900;
+}
+.markdown h4 {
+  @apply mt-6 font-semibold text-gray-900;
+}
+.markdown a {
+  @apply text-indigo-600 underline hover:text-indigo-800;
+}
+.markdown ul {
+  @apply list-disc pl-6;
+}
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+.markdown li + li {
+  @apply mt-1;
+}
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600;
+}
+.markdown code {
+  @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[13px] text-gray-800;
+}
+.markdown pre {
+  @apply overflow-x-auto rounded-lg bg-gray-900 p-4 text-gray-100;
+}
+.markdown pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+.markdown hr {
+  @apply border-gray-200;
+}
+.markdown table {
+  @apply block w-full overflow-x-auto border-collapse text-sm;
+}
+.markdown th,
+.markdown td {
+  @apply border border-gray-200 px-3 py-2 text-left;
+}
+.markdown th {
+  @apply bg-gray-50 font-semibold;
+}
+.markdown img {
+  @apply max-w-full rounded-lg;
+}
